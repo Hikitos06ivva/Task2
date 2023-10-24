@@ -1,0 +1,162 @@
+#include <iostream>
+using namespace std; 
+int main()
+{
+    setlocale(0, "");
+    int klient;
+    int Age; 
+    int MaxAge=0;
+    int MinAge=100;
+    double SreAge=0;
+   
+    cout << "Введите количесво посветителей: "; 
+    cin >> klient;
+    for (int i = 0; i < klient; i++) 
+    {
+        cout << "Введите возраст " << i + 1 << "го-посетителя: ";
+        cin >> Age;
+        SreAge = SreAge + Age;
+
+        if (Age > MaxAge) {
+            MaxAge = Age;
+        }
+        if (Age < MinAge) {
+            MinAge = Age;
+        } 
+    }
+    SreAge = SreAge / klient; 
+    cout << SreAge << "\n";
+    cout << "Минимальный возраст" << MinAge << "\n";
+    cout << "Максимальный возраст" << MaxAge << "\n";
+
+}
+__________________________________________________________________________________________________
+
+#include <iostream>
+using namespace std; 
+int main()
+{
+    setlocale(0, "");
+    int day;
+    cout << "Введите день недели (номер 1-7): ";
+    cin >> day;
+    switch (day)
+    {
+    case 1:
+        cout << "Понедельник:\n9:00 Учеба\n18:00 Тренировка\n20:00 Встреча с братками";
+        break;
+    case 2:
+        cout << "Вторник:\n9:00 Учеба\n18:00 Дневной сон\n20:00 Встреча с кентиками";
+        break;
+    case 3:
+        cout << "Среда:\n9:00 Никакой учебы, отдых\n18:00 Дневной раскумар\n20:00 Получение люлей от мамы за прогул";
+        break;
+    case 4:
+        cout << "Четверг:\n9:00 Учеба\n18:00 Запись на ноготочки\n20:00 Показ ноготочков кентикам";
+        break;
+    case 5:
+        cout << "Пятница:\n9:00 Учеба\n18:00 Закупка пива\n20:00 Распитие жидкого золота с братками";
+        break;
+    case 6:
+        cout << "Суббота:\n12:00 Играть в раст\n18:00 Дневной сон\n20:00 Сидеть с кентиками в дс";
+        break;
+    case 7:
+        cout << "Воскресенье:\n00:00-00:00 спать";
+        break;
+    default:
+        cout << "Существует толшбько 7 дней неделии";
+        break;
+    }
+}
+__________________________________________________________________________________________________
+#include <iostream>
+using namespace std; 
+int main()
+{
+    setlocale(0, "");
+    char station;
+    cout << "Введите станцию (A,B,C,D,E): ";
+    cin >> station; 
+    switch (station)
+    {
+    case 'a':
+    case 'A':
+        cout << "До этой станиции ехать 25 минут";
+        break; 
+    case 'b':
+    case 'B':
+        cout << "До этой станции ехать 12 минут";
+        break;
+    case 'c':
+    case 'C':
+        cout << "До этой станции ехать 40 минут";
+        break;
+    case 'd':
+    case 'D':
+        cout << "До этой станции ехать 23 минут";
+        break;
+    case 'e':
+    case 'E':
+        cout << "До этой станции ехать 6 минут";
+        break;
+    default:  
+        cout << " Такой ствнции нет";
+         break;
+    }
+}
+__________________________________________________________________________________________________
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    setlocale(0,"");
+    int a;
+    int b;
+    cout << "Ведите первое число:"<<"\n";
+    cin >> a;
+    cout << "Ведите второе число:" << "\n";
+    cin >> b;
+    int size;
+    cout << "Ведите результат умножения:" << "\n";
+    cin >> size;
+    if (size == a * b) {
+        cout << "Молодец, всё верно!";
+    }
+    else {
+        cout << "Всё не верно! "<< a*b << " - это верный ответ!";
+    }
+    return 0;
+}
+__________________________________________________________________________________________________
+#include <iostream>
+using namespace std; 
+int main()
+{
+    setlocale(0, "");
+    int finger; 
+    cout << "Введите номер пальца (Счет начинается с большого пальца: ";
+    cin >> finger;  
+    switch (finger)
+    {
+    case 1:
+        cout << " Это большой палец";
+        break;
+    case 2:
+        cout << " Это указательный палец";
+        break;
+    case 3:
+        cout << " Это средний палец";
+        break;
+    case 4:
+        cout << " Это безимянный палец";
+        break;
+    case 5:
+        cout << " Это мизинец палец";
+        break;
+    default:
+        cout << "НЕ ВЕРНОЕ ЗНАЧЕНИЕ ";
+        break;
+    }
+    
+}
